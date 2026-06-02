@@ -30,6 +30,7 @@ export default function Home() {
       const { data, error } = await supabase
         .from("products")
         .select("*, product_images(*)");
+        console.log(data, error);
 
       if (error) {
         setError(error);
